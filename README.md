@@ -1,7 +1,7 @@
 # Win32AppProgressUI
 ### _Displays a progress UI during Intune Win32 app scripted installs_
 
-***Win32 App Script Progress UI*** is a simple .Net Framework executable that can be included in your Intune Win32 app scripted installs to provide a visual indicator of progress. It works best for scripted installations with multiple steps that overall take long enough that you want to provide some visual indication of progress to improve the user experience. In this way, the user is not just left staring at the "Installing..." status in the Company Portal wondering if anything is actually happening...!
+***Win32 App Script Progress UI*** is a simple .Net Framework executable that can be included in your Intune Win32 app scripted installs to provide a visual indicator of progress. It works best for scripted installations with multiple steps that overall take long enough that you want to track the progress visually to improve the user experience. In this way, the user is not just left staring at the "Installing..." status in the Company Portal wondering if anything is actually happening...!
 
 ![alt text](https://github.com/SMSAgentSoftware/Win32AppProgressUI/blob/main/Screenshots/2023-09-11_16-36-38.gif?raw=true)
 
