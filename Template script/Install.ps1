@@ -206,10 +206,9 @@ Display-ProgressUI
 ## EXAMPLE STEP 1 ##
 ####################
 #region Step1
-# Send the step name, number and severity to the progress UI
+# Send the step name and severity to the progress UI
 $Key.SetValue("StepName","Downloading application X")
 $Key.SetValue("StepSeverity","Information") # Possible values are: Information, Warning, Error.
-$Key.SetValue("StepNumber","1")
 
 $URL = "https://corretto.aws/downloads/latest/amazon-corretto-8-x64-windows-jdk.msi"
 $Filename = $URL.Split('/')[-1]
@@ -228,6 +227,8 @@ catch
     Invoke-Cleanup
     Exit 1
 }
+# Set the StepNumber to indicate this step is complete
+$Key.SetValue("StepNumber","1")
 #endregion
 
 
@@ -235,9 +236,8 @@ catch
 ## EXAMPLE STEP 2 ##
 ####################
 #region Step2
-# Send the next step name and increment the step number to the progress UI
+# Send the next step name to the progress UI
 $Key.SetValue("StepName","Installing application X")
-$Key.SetValue("StepNumber","2")
 
 $InstallTimeoutSeconds = 300
 $InstallerStopwatch = [System.Diagnostics.Stopwatch]::StartNew()
@@ -263,6 +263,8 @@ If ($InstallerStopwatch.Elapsed.TotalSeconds -ge $InstallTimeoutSeconds)
     Invoke-Cleanup
     Exit 1
 }
+# Increment the StepNumber to indicate this step is complete
+$Key.SetValue("StepNumber","2")
 #endregion
 
 
