@@ -29,9 +29,9 @@ When the script is completed, set the ***CurrentStatus*** to ***Completed*** and
 ![alt text](https://github.com/SMSAgentSoftware/Win32AppProgressUI/blob/main/Screenshots/Completed.png?raw=true)
 
 ### How to use it
-Download the release package and download the ***Install*** script in the ***Template script*** folder. The template script contains all the code you need to use the progress UI including example steps that demonstrate how to set the UI progress values. Replace the example steps between the ***Preparation*** and ***Finish Up*** code regions with your own installation logic.
+Download the **[Release](https://github.com/SMSAgentSoftware/Win32AppProgressUI/releases)** package and download the ***Install*** script in the ***Template script*** folder above. The template script contains all the code you need to use the progress UI including example steps that demonstrate how to set the UI progress values. Replace the example steps between the ***Preparation*** and ***Finish Up*** code regions with your own installation logic.
 
-Package both the ***Win32 App Script Progress UI.exe*** and ***Install.ps1*** into a Win32 application.
+Package both the ***Win32 App Script Progress UI.exe*** and ***Install.ps1*** together into a Win32 application.
 
 **Important**: set the __Install command__ in the Win32 app to call the 64-bit version of PowerShell, otherwise it won't read the registry keys, eg
 __%windir%\SysNative\WindowsPowershell\v1.0\PowerShell.exe -ExecutionPolicy Bypass -File .\Install.ps1__
